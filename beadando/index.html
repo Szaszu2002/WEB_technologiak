@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    
+    <style>
+        body {
+            margin: 0;
+            background-image: url(""); ///teljes képernyő kitöltése egy képpel
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        li a {
+            display: block;
+            color: #092213;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        li a.active {
+            background-color: #38918c;
+            color: white;
+        }
+        /* nem active class-ú listás linkek*/
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li>
+            <a class="active" href="#home">Home</a>
+        </li>
+        <li>
+            <a href="#order">Order</a> ///48
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+        <li>
+            <a href="#about">About</a>
+        </li>
+    </ul>
+
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+        <h2></h2>
+        <h3></h3>
+        
+        <p></p>
+        
+    </div>
+
+</body>
+
+</html>
