@@ -4,6 +4,57 @@
         <meta content="text/html;charset=UTF-8">
     </head>
     <body style="background:transparent; color:rgb(105, 173, 136); font-family:tahoma; font-size:10pt">
-
+        <form target="_self">
+            <div class="row">
+                <div class="col-25">
+                    <label for="name">Név:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="name" name="name" placeholder="Teljes név">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="eaddress">Email cím:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="eaddress" name="emailaddress" placeholder="Email cím">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="color">Koszorú színe:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="color" name="color">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="alap">Koszorú alap:</label>
+                </div>
+                <div class="col-75">
+                    <input type="radio" id="alap" name="alap" value="toboz">
+                    <label for="toboz">toboz</label>
+                    <input type="radio" id="alap" name="alap" value="szalmas">
+                    <label for="szalmas">szalmás</label>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-25">
+                    <label for="disz">Díszek:</label>
+                </div>
+                <div class="col-75">
+                    <input type="checkbox" id="disz" name="virag" value="muvirág">
+                    <label for="muvirag">művirág</label>
+                    <input type="checkbox" id="disz" name="toboz" value="toboz">
+                    <label for="toboz">toboz</label>
+                    <input type="checkbox" id="disz" name="level" value="level">
+                    <label for="level">levél</label>
+                </div>
+            </div>
+            <input type="button" value="Mentés">
+        </form>
     </body>
 </html>
