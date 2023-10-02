@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            table{
+                border-collapse: collapse;
+                border: thin solid black;
+            }
+            .error{
+                color: red;
+                text-decoration: underline;
+                font-weight: bold;
+                font-size: large;
+            }
+        </style>
+        <script>
+            var employee=[];
+            function addEmployee(){
+                var name= $('#name').val();
+                var age= $('#age').val();
+                var adress= $('#adress').val();
+                if(name.trim()==""||age.trim()==""||adress.trim()==""){
+                    content+="invalid data.";
+                    $("#employeeTable").removeClass("error");
+                }
+                else{
+                    employee.push({"id":employee.length+"",name:name,"age":age, adress:address});
+                    content+="<table><tr><th>id</th><th>name</th><th>address</th></tr></table>"
+                    for(var i=0;i<employee.length;i++){
+                        content+="<tr><th>"+employee[i].id+"</th><th>"+employee[i].age+"</th><th>"+employee[i].address+"</th></tr>"
+                    }
+                    content+="</table>";
+                }
+                $("#employeeTable").html(content);
+            }
+        </script>
+    </head>
+    <body>
+        <h2>List of Employee</h2>
+        <div id="employeeTable"></div>
+        <h2>Employee form</h2>
+        <div>
+            <input type="text" id="name" placeholder="Name"/>
+        </div>
+        <div>
+            <input type="number" id="age" placeholder="Age" />
+        </div>
+        <div>
+            <input type="text" id="age" placeholder="Adress" />
+        </div>
+        <div>
+            <input type="button" id="addButton" value="Add employee" onclick="addEmployee()"/>
+        </div>
+    </body>
+</html>
