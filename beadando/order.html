@@ -2,9 +2,30 @@
     <head>
         <title>Order</title>
         <meta content="text/html;charset=UTF-8">
+        <style>
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .col-25 {
+                float: left;
+                width: 25%;
+                margin-top: 6px;
+            }
+
+            .col-75 {
+                float: left;
+                width: 75%;
+                margin-top: 6px;
+                min-width: 60%;
+                min-height: 50px;
+            }
+        </style>
     </head>
-    <body style="background:transparent; color:rgb(105, 173, 136); font-family:tahoma; font-size:10pt">
-        <form target="_self">
+    <body style="background:transparent; color:rgb(105, 173, 136); font-family:tahoma; font-size:15pt; text-align: center;">
+        <form target="_self" style="width:980px; text-align: center;">
             <div class="row">
                 <div class="col-25">
                     <label for="name">Név:</label>
