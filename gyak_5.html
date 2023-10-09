@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            /*table{
+                border-collapse: collapse;
+                border: thin solid black;
+            }*/
+            .error{
+                color: red;
+                text-decoration: underline;
+                font-weight: bold;
+                font-size: large;
+            }
+            .form-error{
+                border-color: red;
+            }
+            table{
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width:100%;
+            }
+            td, th{
+                padding-top: 2px;
+            }
+            input{
+                width:100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 1px;
+                box-sizing: border-box;
+            }
+            ul{
+                list-style-type: none;
+                float:left;
+                padding: 2px;
+            }
+            li{
+                float: left;
+                border-right: 1px; 
+            }
+            .labelStyle{
+                font-size: 14px;
+                color:blueviolet;
+                font-weight: bold;
+            }
+        </style>
+        <script>
+            var employee=[];
+            function addEmployee(){
+                var name= $('#name').val();
+                var age= $('#age').val();
+                var address= $('#address').val();
+                var married=$('#married').val();
+                $('#age').removeClass("form-error");
+                $('#name').removeClass("form-error");
+                $('#address').removeClass("form-error");
+                $('#place').removeClass("form-error");
+                if(name.trim()==""|| name.length <5){
+                    $('#name').addClass("form-error");
+                }
+                if(age.trim()==""|| Number(age) <15){
+                    $('#age').addClass("form-error");
+                }
+                if(address.trim()==""|| address.length <5){
+                    $('#address').addClass("form-error");
+                }
+                if(place.trim()==""|| place.length <5){
+                    $('#place').addClass("form-error");
+                }
+                if(name.trim()==""||age.trim()==""||address.trim()==""){
+                    content+="invalid data.";
+                    $("#employeeTable").removeClass("error");
+                }
+                else{
+                    employee.push({"id":employee.length+"",name:name,"age":age, address:address, place:place});
+                    content+="<table><tr><th>id</th><th>name</th><th>address</th><th>married</th></tr></table>"
+                    for(var i=0;i<employee.length;i++){
+                        content+="<tr><th>"+employee[i].id+"</th><th>"+employee[i].name+"</th><th>"+employee[i].age+"</th><th>"+employee[i].address+ "</th><th>"+employee[i].place+ "</th></tr>";
+                        if(employee[i].married == true){
+                            content+='<input type="checkbox" name="married" /> married'  +"</th></tr>";
+                        }
+                        else{
+                            content+='<input type="checkbox" name="" /> married'  +"</th></tr>";
+                        }
+                        content+= "</td><td id=color"+i+"> <input type='color' onclick='background(this, "+i+")/></td></tr>";
+                    }
+                    content+="</table>";
+                }
+                $("#employeeTable").html(content);
+            }
+            function background(element){
+                console.log(element);
+                element.style="background-color:"+ element.value;
+            }
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#about">Home</a>
+            </li>
+            <li>
+                <a href="#content">Home</a>
+            </li>
+        </ul>
+        <h2>List of Employee</h2>
+        <div id="employeeTable"></div>
+        <h2>Employee form</h2>
+        <label  class= 'labelStyle' for="name">Name</label>
+        <div>
+            <input type="text" id="name" placeholder="Name"/>
+        </div>
+        <label  class= 'labelStyle' for="age">Age</label>
+        <div>
+            <input type="number" id="age" placeholder="Age" />
+        </div>
+        <label  class= 'labelStyle' for="address">Adress</label>
+        <div>
+            <input type="text" id="address" placeholder="Adress" />
+        </div>
+        <label  class= 'labelStyle' for="married">Married</label>
+        <div>
+            <input type="text" id="married" placeholder="Married" />
+        </div>
+        <label  class= 'labelStyle' for="place">Place</label>
+        <div>
+            <input type="text" id="place" placeholder="Place" />
+        </div>
+        <div>
+            <input type="button" id="addButton" value="Add employee" onclick="addEmployee()"/>
+        </div>
+        
+    </body>
+</html>
