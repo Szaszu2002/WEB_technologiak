@@ -30,7 +30,16 @@
                 text-align: center;
                 margin-left:40px;
             }
+            .error{
+                color: red;
+                text-decoration: underline;
+                font-weight: bold;
+                font-size: large;
+            }
         </style>
+        <script>
+            
+        </script>
     </head>
     <body class="body-table">
         <form target="_self" style="width:980px; text-align: center;">
@@ -39,7 +48,7 @@
                     <label for="name">Név:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="name" name="name" placeholder="Teljes név">
+                    <input type="text" id="name" name="name" placeholder="Teljes név"/>
                 </div>
             </div>
             <div class="row">
@@ -47,7 +56,7 @@
                     <label for="eaddress">Email cím:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="eaddress" name="emailaddress" placeholder="Email cím">
+                    <input type="text" id="eaddress" name="emailaddress" placeholder="Email cím"/>
                 </div>
             </div>
             <div class="row">
@@ -55,7 +64,7 @@
                     <label for="color">Koszorú színe:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="color" name="color">
+                    <input type="text" id="color" name="color"/>
                 </div>
             </div>
             <div class="row">
@@ -63,9 +72,9 @@
                     <label for="alap">Koszorú alap:</label>
                 </div>
                 <div class="col-75">
-                    <input type="radio" id="alap" name="alap" value="toboz">
+                    <input type="radio" id="alap" name="alap" value="toboz"/>
                     <label for="toboz">toboz</label>
-                    <input type="radio" id="alap" name="alap" value="szalmas">
+                    <input type="radio" id="alap" name="alap" value="szalmas"/>
                     <label for="szalmas">szalmás</label>
                 </div>
             </div>
@@ -75,15 +84,15 @@
                     <label for="disz">Díszek:</label>
                 </div>
                 <div class="col-75">
-                    <input type="checkbox" id="disz" name="virag" value="muvirág">
+                    <input type="checkbox" id="disz" name="virag" value="muvirág"/>
                     <label for="muvirag">művirág</label>
-                    <input type="checkbox" id="disz" name="toboz" value="toboz">
+                    <input type="checkbox" id="disz" name="toboz" value="toboz"/>
                     <label for="toboz">toboz</label>
-                    <input type="checkbox" id="disz" name="level" value="level">
+                    <input type="checkbox" id="disz" name="level" value="level"/>
                     <label for="level">levél</label>
                 </div>
             </div>
-            <input type="button" value="Mentés">
+            <input type="button" id="addButton" value="Mentés" onclick="addOrder()"/>
         </form>
     </body>
 </html>
