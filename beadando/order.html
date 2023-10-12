@@ -36,9 +36,23 @@
                 font-weight: bold;
                 font-size: large;
             }
+            .form-error{
+                border-color: red;
+            }
         </style>
         <script>
-            
+            function addOrder(){
+                var name = $('#name').val();
+                var eaddress = $('#eaddress').val();
+                $('#name').removeClass("form-error");
+                $('eaddress').removeClass("form-error");
+                if(name.trim()==""|| name.length <5){
+                    $('#name').addClass("form-error");
+                }
+                if(eaddress.trim()==""|| eaddress.length <5){
+                    $('#eaddress').addClass("form-error");
+                }
+            }
         </script>
     </head>
     <body class="body-table">
