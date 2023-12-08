@@ -10,10 +10,35 @@
                 font-size:10pt;
                 margin-left:100px;
             }
-        </style>  
+            
+            li{
+                padding-top: 20px;
+            }
+
+            div {
+                width: 800px;
+                height: 50px;
+                font-weight: bold;
+                position: relative;
+                animation: mymove 5s;
+                animation-fill-mode: forwards;
+            }
+
+            #div1 {animation-timing-function: linear;}
+            #div2 {animation-timing-function: ease;}
+            #div3 {animation-timing-function: ease-in;}
+            #div4 {animation-timing-function: ease-out;}
+            #div5 {animation-timing-function: ease-in-out;}
+
+            @keyframes mymove {
+            from {left: 0px;}
+            to {left: 50px;}
+            }
+        </style> 
+        
     </head>
     <body class="body-table">
-        <div>
+        <div id="div2">
             <h2>Üzletvezető adatai</h2>
             <ul>
                 <li>
@@ -21,9 +46,6 @@
                 </li>
                 <li>
                     Telefonszám: <i></i>
-                </li>
-                <li>
-
                 </li>
             </ul>
             <h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-heart" viewBox="0 0 16 16">
@@ -34,13 +56,9 @@
                     Email: <i>szaboalexandra2002@freemail.hu vagy szaboalexandram18@gmail.com</i>
                 </li>
                 <li>
-                    Telefonszám: 06 30 285 5820<i></i>
-                </li>
-                <li>
-
+                    Telefonszám: <i>06302855820</i>
                 </li>
             </ul>
-        </div>
-        
+        </div>    
     </body>
 </html>
